@@ -29,18 +29,19 @@
             <form>
 
                 <label for="nome">Nome: </label>
-                <input type="text" id="nome">
-                <br>
+                <input type="text" id="nome" onkeyup="validanome()">
+                <div id="txtNome"></div>
                 <br>
                 <label for="email">E-mail: </label>
-                <input type="email" id="email">
-                <br>
+                <input type="email" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
                 <br>
                 <label for="assunto">Assunto: </label>
-                <textarea name="assunto" id="assunto" cols="30" rows="10"></textarea>
+                <textarea name="assunto" id="assunto" cols="30" rows="10" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
                 <br>
                 <br>
-                <button>Enviar</button>
+                <button onclick="enviar()">Enviar</button>
             </form>
         </div>
 
@@ -52,7 +53,7 @@
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.492910341041!2d-46.32371594999999!3d-23.4426783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7c558275220d%3A0xf9884be844e765f4!2sJardim%20Mossapyra%2C%20Itaquaquecetuba%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1689997010216!5m2!1spt-BR!2sbr"
                 width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-wh
-    en-downgrade"></iframe>
+    en-downgrade" onmousemove="mapaZoom()" onmouseout = "mapaNormal()"id=" mapa"></iframe>
         </div>
     </div>
 
@@ -72,6 +73,8 @@
             Todos os direitos reservados: Emily &copy
         </p>
     </footer>
+
+    <script src="assends/js/script.js"></script>
 </body>
 
 </html>
